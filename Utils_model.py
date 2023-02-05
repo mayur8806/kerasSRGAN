@@ -10,6 +10,7 @@ import keras.backend as K
 from keras.models import Model
 from keras import optimizers
 # from keras import optimizers_v1
+import tensorflow as tf
 
 
 class VGG_LOSS(object):
@@ -33,5 +34,5 @@ class VGG_LOSS(object):
     
 def get_optimizer():
  
-    adam =optimizers.Adam(learning_rate=1E-4, beta_1=0.9, beta_2=0.999, epsilon=1e-08)
+    adam =tf.optimizers.Adam(learning_rate=1E-4, beta_1=0.9, beta_2=0.999, epsilon=1e-08)
     return adam
